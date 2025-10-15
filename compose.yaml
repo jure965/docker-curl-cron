@@ -1,0 +1,7 @@
+services:
+  curl-cron:
+    env_file:
+      - prod.env
+    build:
+      context: .
+      dockerfile: Dockerfile

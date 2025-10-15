@@ -2,8 +2,5 @@
 
 set -e
 
-echo "$(date) - Start"
-
-curl $OPTIONS
-
-echo "$(date) End"
+response=$(curl -s --stderr /dev/null -L -o /dev/null -w "%{http_code}" $URL)
+echo "$(date) - $URL - $response"

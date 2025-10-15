@@ -1,9 +1,8 @@
-FROM alpine:3.7
+FROM alpine:3.22
 
 RUN apk --no-cache add curl
 
 ADD *.sh /
-RUN chmod +x /*.sh
 
 ENTRYPOINT ["/start.sh"]
 CMD [""]
